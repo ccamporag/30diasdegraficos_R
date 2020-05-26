@@ -33,7 +33,7 @@ for (i in 1:nrow_ciudad){ciudad[i,] <- sample(6:9,col,replace = TRUE,
                                               prob=c(.2,.2,.4,.2))}
 
 
-plot <- rbind(cielo,cielo3,montaña,montaña2,ciudad) %>% as_tibble() %>% 
+plot <- rbind(cielo,cielo2,montaña,montaña2,ciudad) %>% as_tibble() %>% 
   mutate(y=seq(nrow(plot),1)) %>% pivot_longer(1:col,"columna") %>% 
   mutate(x=rep(seq(1,ncol(plot)),nrow(plot))) %>% mutate(value=as.factor(value))
 
